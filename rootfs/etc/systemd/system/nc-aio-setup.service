@@ -1,0 +1,9 @@
+[Unit]
+Description=Check Nextcloud AIO installation and install if needed
+After=docker.service
+
+[Service]
+ExecStart=/nc-aio-setup.sh
+
+[Install]
+WantedBy=multi-user.target

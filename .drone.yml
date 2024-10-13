@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+type: docker
+
+steps:
+  - name: kaniko
+    image: plugins/docker
+    settings:
+      repo: registry.andrey.wtf/nextcloud-aio-solo:latests
+      mirror: https://mirror.gcr.io
