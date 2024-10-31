@@ -12,7 +12,7 @@ ARG OS_AGENT_VERSION=1.6.0
 ARG SUPERVISED_INSTALLER_GIT_REF=main
 ARG DATA_SHARE=/usr/share/hassio
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
   systemd \

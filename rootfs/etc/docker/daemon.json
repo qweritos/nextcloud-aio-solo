@@ -1,5 +1,4 @@
 {
-    "data-root": "/data/docker",
     "log-driver": "journald",
     "log-opts": {
         "tag": "{{.Name}}"

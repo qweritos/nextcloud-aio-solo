@@ -10,8 +10,10 @@ NC_PRIMARY_CONTAINER_NAME="nextcloud-aio-nextcloud"
            --publish 8080:8080 \
            --env APACHE_PORT=11000 \
            --env APACHE_IP_BINDING=0.0.0.0 \
+           --env NEXTCLOUD_DATADIR="/data" \
            --volume nextcloud_aio_mastercontainer:/mnt/docker-aio-config \
            --volume /var/run/docker.sock:/var/run/docker.sock:ro \
+           --volume /data:/data \
            --add-host=host.docker.internal:0.0.0.0 \
        nextcloud/all-in-one:latest
 

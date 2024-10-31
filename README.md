@@ -20,6 +20,7 @@ docker run -d --name nextcloud-aio-solo \
               --privileged \
               -p 8080:8080 \
               -p 11000:11000 \
+              -v $(pwd)/docker-data:/var/lib/docker
               -v $(pwd)/data:/data
         registry.andrey.wtf/nextcloud-aio-solo:latest
 ```
